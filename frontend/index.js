@@ -54,7 +54,7 @@ import useRenderSignal from './useRenderSignal';
  */
 const changeDelay = 500;
 const supportedFields = [FieldType.MULTILINE_TEXT, FieldType.SINGLE_LINE_TEXT, FieldType.RICH_TEXT];
-const isFieldSupported = field => supportedFields.includes(field.type);
+const isFieldSupported = (field) => supportedFields.includes(field.type);
 
 function JsonEditorApp() {
     // Caches the currently selected record and field in state. If the user
@@ -134,7 +134,7 @@ function EditorGuard({table, selectedRecordId, selectedFieldId}) {
         fields: [selectedField],
     });
     const onChange = useDebounced(
-        value => {
+        (value) => {
             // Ignore change events triggered by explicitly setting the
             // component's `value` (e.g. when navigating between cells or when
             // the selected record is updated from the table.

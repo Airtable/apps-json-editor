@@ -71,7 +71,7 @@ export default function Monaco({
             onLoad();
             return;
         }
-        loadMonacoAsync().then(loaded => {
+        loadMonacoAsync().then((loaded) => {
             setMonaco(loaded);
         });
     }, [monaco, onLoad]);
